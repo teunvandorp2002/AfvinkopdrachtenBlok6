@@ -1,4 +1,4 @@
-package week2;
+package week2.SortingGenes;
 
 public class Gene implements Comparable{
     private String chromosome;

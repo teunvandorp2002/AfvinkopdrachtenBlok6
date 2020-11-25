@@ -1,4 +1,6 @@
-package week2;
+package week2.SortingGenes;
+
+import week2.SortingGenes.Gene;
 
 import javax.swing.*;
 import java.io.BufferedReader;
