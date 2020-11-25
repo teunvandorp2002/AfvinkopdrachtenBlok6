@@ -14,7 +14,6 @@ public class GUI extends JFrame {
     public GUI() {
         this.setSize(500, 500);
         this.setTitle("Game of Life");
-        //this.setResizable(false);
         this.createGUI();
         this.setVisible(true);
         initialiseArray();
@@ -37,20 +36,10 @@ public class GUI extends JFrame {
         Random random = new Random();
         for (int i = 0; i < alivenessCells.length; i++) {
             Arrays.fill(alivenessCells[i], 0);
-
             for (int j = 0; j < alivenessCells[i].length; j++) {
                 alivenessCells[i][j] = random.nextInt(2);
             }
-
-            System.out.println(Arrays.toString(alivenessCells[i]));
         }
-/*
-        alivenessCells[1][1] = 1;
-        alivenessCells[1][2] = 1;
-        alivenessCells[2][1] = 1;
-        alivenessCells[2][2] = 1;
-*/
-
     }
 
     private void play() {
