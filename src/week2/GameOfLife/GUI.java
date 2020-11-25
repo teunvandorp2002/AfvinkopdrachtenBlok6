@@ -96,67 +96,6 @@ public class GUI extends JFrame {
                         }
                     }
                 }
-                /*
-                try {
-                    if (alivenessCells[row - 1][column - 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-                }
-
-                try {
-                    if (alivenessCells[row - 1][column] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-
-                try {
-                    if (alivenessCells[row - 1][column + 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-
-                try {
-                    if (alivenessCells[row][column - 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-                try {
-                    if (alivenessCells[row][column + 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-                try {
-                    if (alivenessCells[row + 1][column - 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-                try {
-                    if (alivenessCells[row + 1][column] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-                try {
-                    if (alivenessCells[row + 1][column + 1] == 1) {
-                        liveNeighbours++;
-                    }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
-
-                 */
                 if (alivenessCells[row][column] == 0) {
                     if (liveNeighbours == 3) {
                         temp[row][column] = 1;
