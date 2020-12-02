@@ -8,8 +8,6 @@ import java.util.Random;
 public class GUI extends JFrame {
     public JPanel[][] cells = new JPanel[100][100];
     public int[][] alivenessCells = new int[100][100];
-    public boolean finished = false;
-
 
     public GUI() {
         this.setSize(500, 500);
@@ -35,7 +33,6 @@ public class GUI extends JFrame {
     private void initialiseArray() {
         Random random = new Random();
         for (int i = 0; i < alivenessCells.length; i++) {
-            Arrays.fill(alivenessCells[i], 0);
             for (int j = 0; j < alivenessCells[i].length; j++) {
                 alivenessCells[i][j] = random.nextInt(2);
             }
@@ -43,17 +40,16 @@ public class GUI extends JFrame {
     }
 
     private void play() {
-        while (!finished) {
+        while (true) {
             colourCells();
+
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             playingGod();
-            check();
         }
-        colourCells();
     }
 
     private void colourCells() {
@@ -100,19 +96,4 @@ public class GUI extends JFrame {
         }
         alivenessCells = temp.clone();
     }
-
-    private void check() {
-        int count = 0;
-        for (int[] ints : alivenessCells) {
-            for (int i : ints) {
-                if (i == 0) {
-                    count++;
-                }
-            }
-        }
-        if (count == 100) {
-            finished = true;
-        }
-    }
-
 }
