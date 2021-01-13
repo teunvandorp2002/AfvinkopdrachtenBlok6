@@ -6,10 +6,10 @@ class Graph {
     public static void makeGraph(ArrayList<ArrayList<String>> genes) {
         ArrayList<String> header = new ArrayList<>(genes.get(0));
         ArrayList<String> seq = new ArrayList<>(genes.get(1));
-        calc(seq, header);
+        overlap(seq, header);
     }
 
-    private static void calc(ArrayList<String> seq, ArrayList<String> header) {
+    private static void overlap(ArrayList<String> seq, ArrayList<String> header) {
         String out = "";
         int count = 0;
         for (int i = 0; i < seq.size(); i++) {
